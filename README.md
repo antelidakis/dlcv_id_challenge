@@ -32,9 +32,9 @@ More interesting the requirement of the task was to:
 This pretty much enforces to devise a custom neural network architecture as all the popular open source deep learning classifiers assume a 3 channel images (e.g. ResNets, Inception, EfficienNets etc).
 
 The case study is broken into 3 notebooks for the following tasks:
-* [Data Exploration](notebooks/a_data_exploration.html)
-* [Feature Engineering](notebooks/b_feature_engineering.html)
-* [Model Training / Validation](notebooks/c_i_train_cnn_grayscale_jit_data_gen_upsampling.html)
+* [Data Exploration](https://htmlpreview.github.io/?https://github.com/antelidakis/dlcv_id_challenge/blob/main/notebooks/a_data_exploration.html)
+* [Feature Engineering](https://htmlpreview.github.io/?https://github.com/antelidakis/dlcv_id_challenge/blob/main/notebooks/b_feature_engineering.html)
+* [Model Training / Validation](https://htmlpreview.github.io/?https://github.com/antelidakis/dlcv_id_challenge/blob/main/notebooks/c_i_train_cnn_grayscale_jit_data_gen_upsampling.html)
 
 
 ## Data
