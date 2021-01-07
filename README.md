@@ -76,9 +76,9 @@ The instructions of the case study required to split the tasks int 3 python note
 
 ### Notebooks
 In particular to the notebooks, they are placed in the `notebooks` folder. You will find the following notebooks as well as associated html instances:
-* [Data Exploration](notebooks/a_data_exploration.html) - The data exploration notebook which details findings on the original data, that lead to feature engineering approaches and decisions made, as well as why a traditional geometric computer vision solution would not work. For the latter a simple solution is provided within the notebook. The notebook also allows the generation -using the original dataset- of pre-processed images for debug/inspection purposes. 
-* [Feature Engineering](notebooks/b_feature_engineering.html) - This notebook formulates the feature engineering pipeline to prepare the data for training a vgg like custom neural network for classification. It provide details of the approach used as well as a worked example to pre-process a 3 channel image.
-* [Model Training / Validation](notebooks/c_i_train_cnn_grayscale_jit_data_gen_upsampling.html) - This notebooks details the creation of an ML model. It allows to create an ML model which classifies the visibility (FULL_VISIBILITY, PARTIAL_VISIBILITY, NO_VISIBILITY) of the card in the photo. 
+* [Data Exploration](https://htmlpreview.github.io/?https://github.com/antelidakis/dlcv_id_challenge/blob/main/notebooks/a_data_exploration.html) - The data exploration notebook which details findings on the original data, that lead to feature engineering approaches and decisions made, as well as why a traditional geometric computer vision solution would not work. For the latter a simple solution is provided within the notebook. The notebook also allows the generation -using the original dataset- of pre-processed images for debug/inspection purposes. 
+* [Feature Engineering](https://htmlpreview.github.io/?https://github.com/antelidakis/dlcv_id_challenge/blob/main/notebooks/b_feature_engineering.html) - This notebook formulates the feature engineering pipeline to prepare the data for training a vgg like custom neural network for classification. It provide details of the approach used as well as a worked example to pre-process a 3 channel image.
+* [Model Training / Validation](https://htmlpreview.github.io/?https://github.com/antelidakis/dlcv_id_challenge/blob/main/notebooks/c_i_train_cnn_grayscale_jit_data_gen_upsampling.html) - This notebooks details the creation of an ML model. It allows to create an ML model which classifies the visibility (FULL_VISIBILITY, PARTIAL_VISIBILITY, NO_VISIBILITY) of the card in the photo. 
 Two different approaches are provided: 
     1. *baseline* one where an imbalanced dataset is upsampled and 
     2. *traditional* one that training is performed assuming the dataset is balanced. 
@@ -148,7 +148,7 @@ This is a classification task. The objective is given an image that may contain 
 
 ## Data Exploration
 
-The first step to to perform data exploration and get an understanding of the data. This is fully detailed in the Data exploration notebook: [Data Exploration](notebooks/a_data_exploration.html)
+The first step to to perform data exploration and get an understanding of the data. This is fully detailed in the Data exploration notebook: [Data Exploration](https://htmlpreview.github.io/?https://github.com/antelidakis/dlcv_id_challenge/blob/main/notebooks/a_data_exploration.html)
 
 You should advise the notebook for a better understanding with graphs and images.
 The outline of the data exploration follows.
@@ -186,25 +186,25 @@ We investigated three different approaches to remove salt and pepper noise in co
 * #### Also as it is not clear if during runtime, the input images for classification will be clear and without salt and pepper noise, we may change the median blur such that the result image to be similar with the ones used in training, thus helping the classifier
 
 ## Feature Engineering
-I utilized the findings from the data exploration part to create a function that transforms the image into a single-channel image and does the pre-processing needed for the training and inference. The notebook formulating this is: [Feature Engineering](notebooks/b_feature_engineering.html)
+I utilized the findings from the data exploration part to create a function that transforms the image into a single-channel image and does the pre-processing needed for the training and inference. The notebook formulating this is: [Feature Engineering](https://htmlpreview.github.io/?https://github.com/antelidakis/dlcv_id_challenge/blob/main/notebooks/b_feature_engineering.html)
 
 ## Model Selection/Validation
-The notebook forumatling the machine training/validation pipeline, evaluation, inference and model testing is: [Model Training / Validation](notebooks/c_i_train_cnn_grayscale_jit_data_gen_upsampling.html).
+The notebook forumatling the machine training/validation pipeline, evaluation, inference and model testing is: [Model Training / Validation](https://htmlpreview.github.io/?https://github.com/antelidakis/dlcv_id_challenge/blob/main/notebooks/c_i_train_cnn_grayscale_jit_data_gen_upsampling.html).
 
 We selected a simple vgg like implementation due to time constrains and the reasoning that follows. Our baseline model uses upsabling data augmentation.
 
 The models trained are the following:
 
-* [VGG with upsambling - baseline](notebooks/c_i_train_cnn_grayscale_jit_data_gen_upsampling.html).
-* [VGG with upsambling no zooms and shifts](notebooks/c_i_train_cnn_grayscale_jit_data_gen_upsambling_nozoom_noshifts.html).
-* [VGG with no upsambling](notebooks/c_i_train_cnn_grayscale_jit_data_gen.html).
-* [VGG with no upsambling and no zooms and shifts](notebooks/c_i_train_cnn_grayscale_jit_data_gen_nozoom_noshifts.html).
+* [VGG with upsambling - baseline](https://htmlpreview.github.io/?https://github.com/antelidakis/dlcv_id_challenge/blob/main/notebooks/c_i_train_cnn_grayscale_jit_data_gen_upsampling.html).
+* [VGG with upsambling no zooms and shifts](https://htmlpreview.github.io/?https://github.com/antelidakis/dlcv_id_challenge/blob/main/notebooks/c_i_train_cnn_grayscale_jit_data_gen_upsambling_nozoom_noshifts.html).
+* [VGG with no upsambling](https://htmlpreview.github.io/?https://github.com/antelidakis/dlcv_id_challenge/blob/main/notebooks/c_i_train_cnn_grayscale_jit_data_gen.html).
+* [VGG with no upsambling and no zooms and shifts](https://htmlpreview.github.io/?https://github.com/antelidakis/dlcv_id_challenge/blob/main/notebooks/c_i_train_cnn_grayscale_jit_data_gen_nozoom_noshifts.html).
 
 Goodness and misclassification analysis are found in the afore training snapshots from the training notebook. 
 
 ### Short discussion on traditional approaches and steps to deep learning
 * Using traditional approaches  requires a lot of assumptions, heuristics and geomatrically engineering the problem.
-* #### A simple approach that further manipulates the images to extract contours and use shape detection with heuristics is implemented in one of the notebooks ([Data Exploration](notebooks/a_data_exploration.html))
+* #### A simple approach that further manipulates the images to extract contours and use shape detection with heuristics is implemented in one of the notebooks ([Data Exploration](https://htmlpreview.github.io/?https://github.com/antelidakis/dlcv_id_challenge/blob/main/notebooks/a_data_exploration.html))
 * #### We got some initial results with some success but it looks that this path is too elaborate and we will be better off trying out machine learning. 
 * Given the nature of the 
     * preprocessed images (Similar in simplicity to MNIST digits), 
